@@ -26,13 +26,15 @@ public class TriggerbotMod implements ClientModInitializer {
             if (hit != null && hit.getType() == HitResult.Type.ENTITY) {
                 EntityHitResult entityHit = (EntityHitResult) hit;
                 
-                // محاكاة النقر وswingHand للـ Fake CPS
-                client.player.swingHand(client.player.getActiveHand());
-                client.interactionManager.attackEntity(client.player, entityHit.getEntity());
-                
-                // تأخير عشوائي بين 6 إلى 20 تيك (لتحقيق 1-3 CPS)
-                delay = 6 + random.nextInt(15);
+                if (client.interactionManager != null) {
+                    client.interactionManager.attackEntity(client.player, entityHit.getEntity());
+                    client.player.swingHand(client.player.getActiveHand());
+                    
+                    delay = 10 + random.nextInt(11);
+                }
             }
         });
     }
+}
+}
 }
