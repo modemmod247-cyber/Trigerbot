@@ -3,7 +3,7 @@
   "id": "triggerbot",
   "version": "${version}",
   "name": "Triggerbot Mod",
-  "description": "A simple 1-3 CPS triggerbot mod for Fabric 1.20.4",
+  "description": "A simple 1-3 CPS triggerbot mod for Fabric 1.21.1",
   "authors": [
     "Player"
   ],
@@ -18,9 +18,9 @@
   },
   "mixins": [],
   "depends": {
-    "fabricloader": ">=0.15.7",
-    "minecraft": "~1.20.4",
-    "java": ">=17",
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
     "fabric-api": "*"
   }
 }
